@@ -48,21 +48,7 @@ public class ListPerformanceTest {
 
 		startTime = System.currentTimeMillis();
 		for (int i = 0; i < COUNT; i++) {
-			list.contains(String.valueOf(i));
-		}
-		endTime = System.currentTimeMillis();
-		System.out.println(String.format("list.contains totalTime: %d", endTime - startTime));
-
-		startTime = System.currentTimeMillis();
-		for (int i = 0; i < COUNT; i++) {
-			list.set(i, String.valueOf(COUNT - i - 1));
-		}
-		endTime = System.currentTimeMillis();
-		System.out.println(String.format("list.set totalTime: %d", endTime - startTime));
-
-		startTime = System.currentTimeMillis();
-		for (int i = 0; i < COUNT; i++) {
-			list.remove(COUNT - i - 1);
+			list.remove(String.valueOf(i));
 		}
 		endTime = System.currentTimeMillis();
 		System.out.println(String.format("list.remove totalTime: %d", endTime - startTime));
