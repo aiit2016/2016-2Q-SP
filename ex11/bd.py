@@ -6,7 +6,7 @@ import sys
 birthday = datetime.strptime(sys.argv[1], "%Y/%M/%d")
 now = datetime.now()
 how_old = int((now - birthday).days / 365.25)
-if (now.month - birthday.month) > 0 :
+if (now.month - birthday.month) > 0:
     month = now.month - birthday.month
 else:
     month = (now.month + 12) - birthday.month
