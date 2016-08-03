@@ -2,7 +2,7 @@ package report31;
 
 import java.io.Serializable;
 
-public class StackItem implements Serializable {
+public class Object4Jcf implements Serializable {
 
 	private static final long serialVersionUID = -4894642796931832189L;
 
@@ -56,7 +56,7 @@ public class StackItem implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		StackItem other = (StackItem) obj;
+		Object4Jcf other = (Object4Jcf) obj;
 		if (itemThree == null) {
 			if (other.itemThree != null)
 				return false;
@@ -68,6 +68,13 @@ public class StackItem implements Serializable {
 				.doubleToLongBits(other.itemTwo))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Object4Jcf [itemOne=" + itemOne + ", itemTwo=" + itemTwo
+				+ ", itemThree=" + itemThree + ", hashCode()=" + hashCode()
+				+ "]";
 	}
 
 }
